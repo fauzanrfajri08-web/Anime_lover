@@ -1,7 +1,6 @@
 # Anime Login + Home App (Flutter)
 
 Template login (gaya "MuseStock") yang lanjut ke halaman home bertema anime
-(gaya streaming/"A Whisker Away"), lengkap dengan animasi.
 
 ## Struktur
 
@@ -46,22 +45,7 @@ assets/images/
    flutter pub get
    flutter run -d chrome   # untuk web
    # atau
-   flutter run              # untuk emulator/device
-   ```
-
-## Catatan tentang gambar
-
-`assets/images/login_banner.jpg` dan `assets/images/home_hero.jpg` saat ini
-diisi dari gambar referensi (screenshot) yang anda kirim, hanya sebagai
-placeholder agar project langsung bisa dijalankan dan terlihat mirip
-desainnya. Untuk hasil terbaik, ganti kedua file itu dengan:
-
-- `login_banner.jpg` → ilustrasi karakter anime saja (background transparan
-  atau solid), bukan screenshot seluruh halaman.
-- `home_hero.jpg` → gambar hero/banner anime resolusi tinggi (misalnya cover
-  film) tanpa elemen UI lain di dalamnya.
-
-Nama file dan lokasinya boleh tetap sama — cukup timpa (replace) isinya.
+   flutter run              # untuk emulator/device   ```
 
 ## Kustomisasi cepat
 
