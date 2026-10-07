@@ -1,0 +1,29 @@
+name: anime_login_app
+description: Login page + anime-themed home page with animations.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/Login.jpg
+    - assets/images/A Whisker Away.jpg
+    - assets/images/A Silent Voice.jpg
+    - assets/images/Chainsaw_Man.jpg
+    - assets/images/Frieren.jpg
+    - assets/images/spirited away.jpg
+    - assets/images/Your Name.jpg
+    - assets/images/Oshi No Ko.jpg
