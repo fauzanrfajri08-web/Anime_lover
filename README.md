@@ -16,26 +16,9 @@ lib/
     login_page.dart          -> panel form kiri + panel navy kanan (responsif)
     home_page.dart           -> top bar, hero banner, list "More for you"
 assets/images/
-  login_banner.jpg           -> placeholder dari gambar referensi anda
-  home_hero.jpg               -> placeholder dari gambar referensi anda
+  login_banner.jpg           -> placeholder dari gambar referensi 
+  home_hero.jpg               -> placeholder dari gambar referensi 
 ```
-
-## Animasi yang sudah dipasang
-
-- **Login page**
-  - Semua elemen form (logo, judul, field, tombol, ikon sosial) muncul
-    bertahap dengan efek fade + slide (`AnimatedEntrance`, delay berjenjang).
-  - Karakter anime di panel kanan "mengambang" pelan (loop naik-turun).
-  - Tombol **Login** mengecil saat ditekan lalu menampilkan spinner sebelum
-    pindah halaman.
-  - Transisi ke Home Page pakai `PageRouteBuilder` custom (fade + slide),
-    bukan transisi default.
-- **Home page**
-  - Top bar meluncur dari atas.
-  - Hero banner + judul + deskripsi + tombol "Watch Now" muncul bertahap.
-  - Kartu rekomendasi di "More for you" muncul satu per satu dari kanan
-    (staggered), dan membesar (scale) saat di-hover (mode desktop/web) atau
-    disentuh.
 
 ## Cara menjalankan
 
