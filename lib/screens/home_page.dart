@@ -3,6 +3,7 @@ import '../data/anime_data.dart';
 import '../models/anime_item.dart';
 import '../theme/app_theme.dart';
 import '../widgets/animated_entrance.dart';
+import 'about_me_page.dart';
 import 'anime_detail_page.dart';
 import 'catalog_page.dart';
 import 'profile_page.dart';
@@ -175,10 +176,12 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           ),
-          _InteractiveCard(
-            onTap: () => Navigator.push(
-              context,
-              MaterialPageRoute(builder: (_) => const ProfilePage()),
+          PopupMenuButton<int>(
+            offset: const Offset(0, 48),
+            color: AppColors.surfaceCard,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(16),
+              side: BorderSide(color: Colors.white.withOpacity(0.08)),
             ),
             child: Container(
               padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
@@ -204,6 +207,41 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
+            onSelected: (value) {
+              if (value == 1) {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) => const ProfilePage()),
+                );
+              } else if (value == 2) {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) => const AboutPage()),
+                );
+              }
+            },
+            itemBuilder: (context) => [
+              const PopupMenuItem<int>(
+                value: 1,
+                child: Row(
+                  children: [
+                    Icon(Icons.person_outline_rounded, color: Colors.white, size: 18),
+                    SizedBox(width: 10),
+                    Text('Profil Saya', style: TextStyle(color: Colors.white, fontSize: 13)),
+                  ],
+                ),
+              ),
+              const PopupMenuItem<int>(
+                value: 2,
+                child: Row(
+                  children: [
+                    Icon(Icons.info_outline_rounded, color: AppColors.primaryAccent, size: 18),
+                    SizedBox(width: 10),
+                    Text('Tentang Pembuat', style: TextStyle(color: Colors.white, fontSize: 13)),
+                  ],
+                ),
+              ),
+            ],
           ),
         ],
       ),
